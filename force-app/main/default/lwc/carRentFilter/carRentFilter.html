@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout class="slds-p-horizontal_small"> 
+        <lightning-layout-item size ="6" >
+            <template if:true={rentPriceFilter}>
+                <lightning-slider label="Rent Price Range" value={price} max="500" min="0" step="10"
+                    onchange={handlePriceChange}></lightning-slider>
+            </template>
+            <template if:true={milesFilter}>
+                <lightning-slider label="Miles Range" value={miles} max="50000" min="0" step="1000"
+                    onchange={handleMilesChange}></lightning-slider>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
